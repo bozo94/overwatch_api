@@ -33,14 +33,14 @@ ActiveRecord::Schema.define(version: 2019_03_31_165456) do
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
-  create_table "heroes", force: :cascade do |t|
+  create_table "heros", force: :cascade do |t|
     t.string "name"
     t.string "real_name"
     t.integer "health"
     t.integer "armour"
     t.integer "shield"
     t.string "slug"
-    t.index ["slug"], name: "index_heroes_on_slug", unique: true
+    t.index ["slug"], name: "index_heros_on_slug", unique: true
   end
 
 end

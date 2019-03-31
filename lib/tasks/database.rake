@@ -1,12 +1,12 @@
 namespace :database do 
-  desc "Import heroes and abilities from API"
-  task :import_heroes_and_abilities_from_api => :environment do 
+  desc "Import heros and abilities from API"
+  task :import_heros_and_abilities_from_api => :environment do 
     domain = "https://overwatch-api.net/api/v1/ability" 
     api_content = HTTParty.get(domain)
     current_page = 1
     while(true)  
-      heroes_and_abilities = api_content["data"]
-      heroes_and_abilities.each do |hero_and_ability|
+      heros_and_abilities = api_content["data"]
+      heros_and_abilities.each do |hero_and_ability|
         puts "importing ability no #{hero_and_ability["id"]}"
         ability = Ability.new(
           name: hero_and_ability["name"],
