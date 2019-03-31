@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2019_03_31_163709) do
   enable_extension "plpgsql"
 
   create_table "abilities", force: :cascade do |t|
+    t.integer "hero_id"
     t.string "name"
     t.text "description"
     t.boolean "is_ultimate", default: false
@@ -24,9 +25,9 @@ ActiveRecord::Schema.define(version: 2019_03_31_163709) do
   create_table "heroes", force: :cascade do |t|
     t.string "name"
     t.string "real_name"
-    t.string "health"
-    t.string "armour"
-    t.string "shield"
+    t.integer "health"
+    t.integer "armour"
+    t.integer "shield"
   end
 
 end
