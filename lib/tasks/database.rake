@@ -20,9 +20,10 @@ namespace :database do
             name: hero_and_ability["hero"]["name"],
             real_name: hero_and_ability["hero"]["real_name"],
             health: hero_and_ability["hero"]["health"],
-            armour: hero_and_ability["hero"]["namearmour"],
+            armour: hero_and_ability["hero"]["armour"],
             shield: hero_and_ability["hero"]["shield"]
           )
+          puts "Hero #{hero.real_name} saved" if hero.save
           ability.hero = hero
         end
         ability.save
