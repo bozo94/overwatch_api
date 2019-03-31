@@ -1,0 +1,10 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  reconnect: false
+  database: file_management_api_dev
+  pool: 5
+  username: db_username
+  password: db_password
+  socket: /var/run/mysqld/mysqld.sock 
+  host: localhost
