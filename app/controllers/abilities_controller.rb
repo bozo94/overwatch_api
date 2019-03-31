@@ -1,5 +1,5 @@
 class AbilitiesController < ApplicationController
-  before_action :set_hero, except: :index
+  before_action :set_ability, except: :index
 
   # GET /api/abilities
   def index
